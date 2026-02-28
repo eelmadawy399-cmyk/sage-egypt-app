@@ -1,5 +1,5 @@
 // SAGE Egypt - Configuration
-var CONFIG = {
+window.CONFIG = {
     CLIENT_ID: '797969199055-d3ma5fcpdpbko3bgp9sptbrrl0t98dcs.apps.googleusercontent.com',
     PROJECT_ID: 'sage2-egypt-project',
     SCOPES: [

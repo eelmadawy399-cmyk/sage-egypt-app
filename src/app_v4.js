@@ -1,3 +1,6 @@
+import './style.css';
+import './styles.css';
+
 // ====== Expert Formatting & Safety Utility ======
 window.safeFormat = function (val, decimals, suffix) {
     if (val === null || val === undefined || isNaN(val)) return '<span style="color:#999;font-style:italic;">غير متوفر</span>';

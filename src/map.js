@@ -8,8 +8,8 @@ var currentCircle = null;
 
 function initMap() {
     map = L.map('map', {
-        center: CONFIG.MAP_CENTER,
-        zoom: CONFIG.MAP_ZOOM,
+        center: window.CONFIG.MAP_CENTER,
+        zoom: window.CONFIG.MAP_ZOOM,
         zoomControl: true,
         attributionControl: false
     });

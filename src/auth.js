@@ -15,8 +15,8 @@ function hideLoading() {
 function initAuthClient() {
     try {
         tokenClient = google.accounts.oauth2.initTokenClient({
-            client_id: CONFIG.CLIENT_ID,
-            scope: CONFIG.SCOPES.join(' '),
+            client_id: window.CONFIG.CLIENT_ID,
+            scope: window.CONFIG.SCOPES.join(' '),
             callback: function (response) {
                 if (response.error) {
                     hideLoading();
@@ -56,7 +56,7 @@ function initAuthClient() {
                         alert('خطأ في تهيئة Earth Engine:\n' + err);
                     },
                     null,
-                    CONFIG.PROJECT_ID
+                    window.CONFIG.PROJECT_ID
                 );
             },
             error_callback: function (err) {

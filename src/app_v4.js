@@ -188,12 +188,12 @@ function checkAccess(feature) {
     if (userContext.plan === 'premium') return true;
 
     // Check if feature is in premium list
-    if (CONFIG.SUBSCRIPTION.PREMIUM_FEATURES.indexOf(feature) !== -1) {
+    if (window.CONFIG.SUBSCRIPTION.PREMIUM_FEATURES.indexOf(feature) !== -1) {
         return false;
     }
 
     // Check limits for free users
-    if (feature === 'farmer_analysis' && userContext.usage.farmer >= CONFIG.SUBSCRIPTION.FREE_ANALYSIS_LIMIT) {
+    if (feature === 'farmer_analysis' && userContext.usage.farmer >= window.CONFIG.SUBSCRIPTION.FREE_ANALYSIS_LIMIT) {
         return 'limit_reached';
     }
 
@@ -292,7 +292,7 @@ function showWelcome() {
 
     var planBadge = userContext.plan === 'premium'
         ? '<div style="background:#E8F5E9; color:#1B5E20; padding:6px; border-radius:20px; font-size:12px; font-weight:bold; margin-bottom:12px; border:1px solid #C8E6C9; display:inline-block;">💎 SAGE Premium Member</div>'
-        : '<div style="background:#F5F5F5; color:#616161; padding:6px; border-radius:20px; font-size:11px; font-weight:bold; margin-bottom:12px; border:1px solid #E0E0E0; display:inline-block;">Standard Plan (' + userContext.usage.farmer + '/' + CONFIG.SUBSCRIPTION.FREE_ANALYSIS_LIMIT + ' Reports)</div>';
+        : '<div style="background:#F5F5F5; color:#616161; padding:6px; border-radius:20px; font-size:11px; font-weight:bold; margin-bottom:12px; border:1px solid #E0E0E0; display:inline-block;">Standard Plan (' + userContext.usage.farmer + '/' + window.CONFIG.SUBSCRIPTION.FREE_ANALYSIS_LIMIT + ' Reports)</div>';
 
     var upgradeBtn = userContext.plan === 'free'
         ? '<button class="btn" style="background:linear-gradient(to right, #FFD700, #FFA000); color:#000; font-weight:bold; border:none; margin-top:10px;" onclick="upgradeToPremium()">🔓 الترقية إلى الإصدار المطور (Upgrade)</button>'
@@ -535,7 +535,7 @@ function executeFarmerAnalysis() {
             '<div class="card" style="text-align:center; border:2px solid #FF9800; padding:20px;">' +
             '  <div class="welcome-logo" style="font-size:40px; margin-bottom:10px;">⚠️</div>' +
             '  <h3 style="color:#E65100; margin-bottom:10px;">عذراً، انتهى الحد المسموح</h3>' +
-            '  <p style="font-size:14px; color:#666; margin-bottom:20px;">لقد استهلكت جميع التحليلات المجانية المتاحة (' + CONFIG.SUBSCRIPTION.FREE_ANALYSIS_LIMIT + '). يرجى الترقية للمتابعة.</p>' +
+            '  <p style="font-size:14px; color:#666; margin-bottom:20px;">لقد استهلكت جميع التحليلات المجانية المتاحة (' + window.CONFIG.SUBSCRIPTION.FREE_ANALYSIS_LIMIT + '). يرجى الترقية للمتابعة.</p>' +
             '  <button class="btn" style="background:linear-gradient(to right, #FFD700, #FFA000); color:#000; font-weight:bold; border:none; width:100%;" onclick="upgradeToPremium()">🔓 الترقية للوصول غير المحدود</button>' +
             '  <button class="btn btn-outline" style="margin-top:12px; width:100%;" onclick="showWelcome()">🔙 العودة للرئيسية</button>' +
             '</div>'

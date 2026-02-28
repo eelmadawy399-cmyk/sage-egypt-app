@@ -211,3 +211,21 @@ function fitToBounds(geojson) {
     var layer = L.geoJSON(geojson);
     map.fitBounds(layer.getBounds(), { padding: [30, 30], maxZoom: 12 });
 }
+
+// ====== GLOBAL BINDINGS FOR VITE ======
+window.initMap = initMap;
+window.addEELayer = addEELayer;
+window.removeEELayer = removeEELayer;
+window.clearEELayers = clearEELayers;
+window.addMarker = addMarker;
+window.addBufferCircle = addBufferCircle;
+window.updateBufferCircle = updateBufferCircle;
+window.centerMap = centerMap;
+window.enableDrawing = enableDrawing;
+window.finishPolygonDrawing = finishPolygonDrawing;
+window.disableDrawing = disableDrawing;
+window.clearDrawnRegion = clearDrawnRegion;
+window.addGeoJsonBoundary = addGeoJsonBoundary;
+window.clearGovBoundary = clearGovBoundary;
+window.fitToBounds = fitToBounds;
+

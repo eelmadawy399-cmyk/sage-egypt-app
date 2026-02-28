@@ -2938,6 +2938,63 @@ function downloadFarmMap() {
 // The mapClickEnabled variable is set here to ensure it's available.
 window.mapClickEnabled = false;
 
+// ====== GLOBAL BINDINGS FOR VITE ES MODULES ======
+window.checkCropCompatibility_FAO = checkCropCompatibility_FAO;
+window.classifyUSDATexture = classifyUSDATexture;
+window.getTextureName = getTextureName;
+window.checkAccess = checkAccess;
+window.incrementUsage = incrementUsage;
+window.upgradeToPremium = upgradeToPremium;
+window.showPanel = showPanel;
+window.hidePanel = hidePanel;
+window.togglePanel = togglePanel;
+window.setPanelTitle = setPanelTitle;
+window.setPanelContent = setPanelContent;
+window.setActiveTab = setActiveTab;
+window.switchMode = switchMode;
+window.showWelcome = showWelcome;
+window.buildFarmerMode = buildFarmerMode;
+window.handleFarmerGovChange = handleFarmerGovChange;
+window.applyManualCoords = applyManualCoords;
+window.enableMapClick = enableMapClick;
+window.onMapClick = onMapClick;
+window.useGPS = useGPS;
+window.showMapToast = showMapToast;
+window.executeFarmerAnalysis = executeFarmerAnalysis;
+window.updateLoadingStatus = updateLoadingStatus;
+window.showDesertWarning = showDesertWarning;
+window.showUrbanWarning = showUrbanWarning;
+window.forceUrbanAnalysis = forceUrbanAnalysis;
+window.pickOpticalCollectionAuto = pickOpticalCollectionAuto;
+window.runFullAnalysis = runFullAnalysis;
+window.cardTitle = cardTitle;
+window.statRow = statRow;
+window.classifySalinity = classifySalinity;
+window.assessPestRisk = assessPestRisk;
+window.getExpertNote = getExpertNote;
+window.calculateIrrigation_Expert = calculateIrrigation_Expert;
+window.calculateLeaching_Professional = calculateLeaching_Professional;
+window.renderFullReport = renderFullReport;
+window.buildResearcherMode = buildResearcherMode;
+window.toggleSection = toggleSection;
+window.safeGet = safeGet;
+window.updateLayerOpacity = updateLayerOpacity;
+window.loadGovernoratesList = loadGovernoratesList;
+window.handleGovChange = handleGovChange;
+window.addResearcherLayer = addResearcherLayer;
+window.refreshLayerPanel = refreshLayerPanel;
+window.toggleResLayer = toggleResLayer;
+window.setResLayerOpacity = setResLayerOpacity;
+window.removeResLayer = removeResLayer;
+window.clearAllResLayers = clearAllResLayers;
+window.showStatsBox = showStatsBox;
+window.showResearchResult = showResearchResult;
+window.runResearcherAnalysis = runResearcherAnalysis;
+window.applyDates = applyDates;
+window.runSpecificModel = runSpecificModel;
+window.downloadFarmMap = downloadFarmMap;
+window.safeFormat = safeFormat;
+
 
 
 

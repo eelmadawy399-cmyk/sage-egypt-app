@@ -79,6 +79,7 @@ function initAuthClient() {
     }
 }
 
+window.startAuth = startAuth;
 function startAuth() {
     if (!tokenClient) {
         alert('Google Identity Services لم يتم تحميله بعد. أعد تحميل الصفحة.');

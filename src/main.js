@@ -1,24 +1,13 @@
+// Core Styles
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './styles.css'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Application Modules
+// Importing them here ensures Vite includes them in the build,
+// but we still rely on them attaching to `window` for compatibility.
+import './config.js'
+import './map.js'
+import './auth.js'
+import './ee-computations_v5.js'
+import './app_v4.js'
 
-setupCounter(document.querySelector('#counter'))

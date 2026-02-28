@@ -1,0 +1,10 @@
+node_modules/
+dist/
+android/
+ios/
+.env
+*.env
+service_account.json
+*.json.key
+.DS_Store
+*.log
